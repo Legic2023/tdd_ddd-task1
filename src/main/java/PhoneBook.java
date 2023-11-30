@@ -7,4 +7,8 @@ public class PhoneBook {
         return phoneBook.size();
     }
 
+    public static String findByNumber(long number) {
+        return null;
+    }
+
 }
