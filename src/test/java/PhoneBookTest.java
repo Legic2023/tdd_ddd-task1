@@ -23,7 +23,20 @@ public class PhoneBookTest {
         final String original = "TestName";
         final long number = 9999999999L;
         // when:
+        PhoneBook.phoneBook.put("TestName", 9999999999L);
         final String result = PhoneBook.findByNumber(number);
+        // then:
+        assertEquals(original, result);
+
+    }
+
+    @Test
+    public void testFindByName() {
+        // given:
+        final String name = "TestName";
+        final long original = 9999999999L;
+        // when:
+        final long result = PhoneBook.findByName(name);
         // then:
         assertEquals(original, result);
 
