@@ -3,10 +3,6 @@ import java.util.*;
 public class PhoneBook {
     static HashMap<String, Long> phoneBook = new HashMap<>();
 
-    public void phoneBook() {
-        PhoneBook.phoneBook.put("TestName", 9999999999L);
-    }
-
     public static int add(String name, long number) {
         phoneBook.put(name, number);
         return phoneBook.size();
@@ -26,7 +22,8 @@ public class PhoneBook {
     }
 
     public static void printAllNames() {
-
+        Map<String, Long> sortedMap = new TreeMap<>(phoneBook);
+        sortedMap.keySet().forEach(System.out::println);
     }
 
 }

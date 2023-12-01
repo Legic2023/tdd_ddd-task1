@@ -61,7 +61,7 @@ public class PhoneBookTest {
         // when:
         PhoneBook.printAllNames();
         // then:
-        assertEquals("TestName", outputStreamCaptor.toString());
+        assertEquals("TestName", outputStreamCaptor.toString().trim());
 
     }
 
